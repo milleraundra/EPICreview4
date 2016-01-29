@@ -8,7 +8,7 @@ describe("PizzaOrder", function() {
   expect(Pizza.toppings).to.eql(["bell peppers", "olives"]);
   });
 
-  it("calculates price of pizza based on size", function() {
+  it("calculates the price of a pizza based on size", function() {
     var Pizza = new PizzaOrder("large", "red", ["pepperoni"], "mozzarella", []);
     expect(Pizza.price()).to.equal(7);
   });
@@ -26,6 +26,11 @@ describe("PizzaOrder", function() {
   it("calculates the price of a pizza based on cheese selection", function() {
     var Pizza = new PizzaOrder("small", "red", ["pepperoni"], "cheddar", []);
     expect(Pizza.price()).to.equal(5.15);
+  });
+
+  it("calculates the price of a pizza based on additional toppings", function() {
+    var Pizza = new PizzaOrder("small", "red", ["pepperoni"], "mozzarella", ["green onion", "jalapeno"]);
+    expect(Pizza.price()).to.equal(5.85);
   })
 
 

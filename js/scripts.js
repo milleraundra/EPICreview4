@@ -30,10 +30,21 @@ PizzaOrder.prototype.price = function(){
   }
 //Price calculation based on cheese selection
 
-  if(this.cheese !== "mozzarella" || this.cheese !== "No cheese") {
+  if(this.cheese === "jack" || this.cheese === "cheddar") {
     pizzaPrice += 0.15;
   }else{}
 
-return pizzaPrice;
+//Price calculation based on toppings
+  for(var i = 0; i < this.toppings.length; i++) {
+    if(this.toppings[i] === "mushrooms" || this.toppings[i] === "pineapple" || this.toppings[i] === "jalapeno") {
+      pizzaPrice += 0.5;
+    }
+    else if(this.toppings[i] === ["No toppings"]){
+      pizzaPrice = pizzaPrice;
+    } else {
+      pizzaPrice += 0.35;
+    }
+  }
 
+return pizzaPrice;
 };
