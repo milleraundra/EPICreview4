@@ -37,11 +37,9 @@ PizzaOrder.prototype.price = function(){
 //Price calculation based on toppings
   for(var i = 0; i < this.toppings.length; i++) {
     if(this.toppings[i] === "mushrooms" || this.toppings[i] === "pineapple" || this.toppings[i] === "jalapeno") {
-      pizzaPrice += 0.5;
+      pizzaPrice += 0.50;
     }
-    else if(this.toppings[i] === ["No toppings"]){
-      pizzaPrice = pizzaPrice;
-    } else {
+    else {
       pizzaPrice += 0.35;
     }
   }

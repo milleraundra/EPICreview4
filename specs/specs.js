@@ -31,6 +31,17 @@ describe("PizzaOrder", function() {
   it("calculates the price of a pizza based on additional toppings", function() {
     var Pizza = new PizzaOrder("small", "red", ["pepperoni"], "mozzarella", ["green onion", "jalapeno"]);
     expect(Pizza.price()).to.equal(5.85);
+  });
+
+  it("does not adjust the price for unchecked meats", function() {
+    var Pizza = new PizzaOrder("small", "red", [], "mozzarella", ["olives"]);
+    expect(Pizza.price()).to.equal(5.35);
+  });
+
+  it("does not adjust the price for unchecked toppings", function() {
+    var Pizza = new PizzaOrder("large", "red", ["pepperoni"], "mozzarella", []);
+    // debugger;
+    expect(Pizza.price()).to.equal(7);
   })
 
 
