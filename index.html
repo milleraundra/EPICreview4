@@ -20,15 +20,15 @@
           <p>To create your pizza, simply select the size a size of pizza, as well as the sauce, meats, cheeses, and toppings you would like. Once you are satisfied with your pizza, click the 'Order Pizza' button below.</p>
         </div>
       </div>
-
+<!--Prices / Aside-->
       <div class="row">
         <div class="col-sm-4">
           <h4>Prices:</h4>
             <p>Sizes</p>
             <ul>
-              <li>Small: $5</li>
-              <li>Medium: $6</li>
-              <li>Large: $7</li>
+              <li>Small: $5.00</li>
+              <li>Medium: $6.00</li>
+              <li>Large: $7.00</li>
             </ul>
             <p>Sauces:</p>
             <ul>
@@ -63,83 +63,111 @@
               </li>
             </ul>
         </div>
-
-          <div class="col-sm-8">
+<!--Pizza form-->
+          <div class="col-sm-4">
             <h3>Make your Pizza!</h3>
             <form id="pizzaOrder" >
-              <label class="formSection" for="sizes">Size:</label>
-                <div class="radio">
-                  <label><input type="radio" name="sizes" value="small" checked> Small</label>
-                </div>
-                <div class="radio">
-                   <label><input type="radio" name="sizes" value="medium"> Medium</label>
-                 </div>
-                 <div class="radio">
-                   <label><input type="radio" name="sizes" value="large"> Large</label>
-                 </div>
+              <div id="pizzaSize">
+                <label class="formSection" for="sizes">Size:</label>
+                  <div class="radio">
+                    <label><input type="radio" name="sizes" value="small" checked> Small</label>
+                  </div>
+                  <div class="radio">
+                     <label><input type="radio" name="sizes" value="medium"> Medium</label>
+                   </div>
+                   <div class="radio">
+                     <label><input type="radio" name="sizes" value="large"> Large</label>
+                   </div>
+              </div>
 
-              <label class="formSection" for="sauces">Sauces:</label>
-                <div class="radio">
-                  <label><input type="radio" name="sauces" value="red" checked> Red</label>
-                </div>
-                <div class="radio">
-                   <label><input type="radio" name="sauces" value="white garlic"> White Garlic</label>
-                 </div>
-                 <div class="radio">
-                   <label><input type="radio" name="sauces" value="red hot"> Red HOT!</label>
-                 </div>
+              <div id="pizzaSauce">
+                <label class="formSection" for="sauces">Sauces:</label>
+                  <div class="radio">
+                    <label><input type="radio" name="sauces" value="red" checked> Red</label>
+                  </div>
+                  <div class="radio">
+                     <label><input type="radio" name="sauces" value="white garlic"> White Garlic</label>
+                   </div>
+                   <div class="radio">
+                     <label><input type="radio" name="sauces" value="red hot"> Red HOT!</label>
+                   </div>
+              </div>
 
-              <label class="formSection" for="meats">Meats:</label>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="pepperoni">Pepperoni</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="sausage">Sausage</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="canadaBacon">Canadian Bacon</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="salami">Salami</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="bacon">Bacon</label>
-                </div>
+              <div id="pizzaMeat">
+                <label class="formSection" for="meats">Meats:</label>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="pepperoni">Pepperoni</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="chicken">Chicken</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="sausage">Sausage</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="canadian bacon">Canadian Bacon</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="salami">Salami</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="bacon">Bacon</label>
+                  </div>
+              </div>
 
-              <label class="formSection" for="cheese">Cheese:</label>
-                <div class="radio">
-                  <label><input type="radio" name="cheese" value="mozzarella" checked> Mozzarella</label>
-                </div>
-                <div class="radio">
-                   <label><input type="radio" name="cheese" value="cheddar"> Cheddar</label>
-                 </div>
-                 <div class="radio">
-                   <label><input type="radio" name="cheese" value="jack"> Jack</label>
-                 </div>
+              <div id="pizzaCheese">
+                <label class="formSection" for="cheese">Cheese:</label>
+                  <div class="radio">
+                    <label><input type="radio" name="cheese" value="mozzarella" checked> Mozzarella</label>
+                  </div>
+                  <div class="radio">
+                     <label><input type="radio" name="cheese" value="cheddar"> Cheddar</label>
+                   </div>
+                   <div class="radio">
+                     <label><input type="radio" name="cheese" value="jack"> Jack</label>
+                   </div>
+              </div>
 
-              <label class="formSection" for="toppings">Other toppings:</label>
-                 <div class="checkbox">
-                   <label><input type="checkbox" value="olives">Olives</label>
-                 </div>
-                 <div class="checkbox">
-                   <label><input type="checkbox" value="bell peppers">Bell Peppers</label>
-                 </div>
-                 <div class="checkbox">
-                   <label><input type="checkbox" value="green onion">Green Onion</label>
-                 </div>
-                 <div class="checkbox">
-                   <label><input type="checkbox" value="mushrooms">Mushrooms</label>
-                 </div>
-                 <div class="checkbox">
-                   <label><input type="checkbox" value="pineapple">Pineapple</label>
-                 </div>
-                 <div class="checkbox">
-                   <label><input type="checkbox" value="jalapeno">Jalapeno</label>
-                 </div>
-
-                 <button type="submit" name="button">Order Pizza</button>
-
+              <div id="pizzaToppings">
+                <label class="formSection" for="toppings">Other toppings:</label>
+                   <div class="checkbox">
+                     <label><input type="checkbox" value="olives">Olives</label>
+                   </div>
+                   <div class="checkbox">
+                     <label><input type="checkbox" value="bell peppers">Bell Peppers</label>
+                   </div>
+                   <div class="checkbox">
+                     <label><input type="checkbox" value="green onion">Green Onion</label>
+                   </div>
+                   <div class="checkbox">
+                     <label><input type="checkbox" value="mushrooms">Mushrooms</label>
+                   </div>
+                   <div class="checkbox">
+                     <label><input type="checkbox" value="pineapple">Pineapple</label>
+                   </div>
+                   <div class="checkbox">
+                     <label><input type="checkbox" value="jalapeno">Jalapeno</label>
+                   </div>
+              </div>
+              <button type="submit" name="button">Order Pizza</button>
             </form>
+
+            <div class="confirmation">
+              <h3>Thank you!</h3>
+              <h4>Your pizza order has been placed.</h4>
+            </div>
+
+          </div>
+<!--Receipt-->
+          <div id="receipt" class="col-sm-4">
+            <h3>Pizza Order Receipt:</h3>
+            <p>Size: <span class="orderSize"></span></p>
+            <p>Sauce: <span class="orderSauce"></span></p>
+            <p>Meats: <span class="orderMeat"></span></p>
+            <p>Cheese: <span class="orderCheese"></span></p>
+            <p>Toppings: <span class="orderToppings"></span></p>
+            <h4>Price: $<span class="pizzaCost"></span></h4>
+
           </div>
         </div>
 

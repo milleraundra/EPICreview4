@@ -7,12 +7,12 @@ function PizzaOrder(size, sauce, meat, cheese, toppings){
 };
 
 PizzaOrder.prototype.price = function(){
-  var pizzaPrice = 5;
-//Price calculation based on size
+  var pizzaPrice = 5.00;
+  //Price calculation based on size
   if(this.size === "large") {
-    pizzaPrice += 2;
+    pizzaPrice += 2.00;
   }else if(this.size === "medium") {
-    pizzaPrice += 1;
+    pizzaPrice += 1.00;
   }
   else {}
 
@@ -43,6 +43,35 @@ PizzaOrder.prototype.price = function(){
       pizzaPrice += 0.35;
     }
   }
-
 return pizzaPrice;
 };
+
+$(document).ready(function() {
+  $("form#pizzaOrder").submit(function(event) {
+    event.preventDefault();
+
+    var size = $("#pizzaSize input[type='radio']:checked").val();
+    var sauce = $("#pizzaSauce input[type='radio']:checked").val();
+    var meat = [];
+    $("#pizzaMeat input[type='checkbox']:checked").each(function(i) {
+      meat[i] = $(this).val();});
+    var cheese = $("#pizzaCheese input[type='radio']:checked").val();
+    var toppings = [];
+    $("#pizzaToppings input[type='checkbox']:checked").each(function(i) {
+      toppings[i] = $(this).val();});
+
+    var newPizza = new PizzaOrder(size, sauce, meat, cheese, toppings);
+
+    $("#receipt").show();
+    $(".confirmation").show();
+    $(".orderSize").text(size);
+    $(".orderSauce").text(sauce);
+    $(".orderMeat").text(meat);
+    $(".orderCheese").text(cheese);
+    $(".orderToppings").text(toppings);
+    $(".pizzaCost").text(newPizza.price());
+
+
+
+  });
+});
