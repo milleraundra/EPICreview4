@@ -42,7 +42,7 @@ describe("PizzaOrder", function() {
     var Pizza = new PizzaOrder("large", "red", ["pepperoni"], "mozzarella", []);
     // debugger;
     expect(Pizza.price()).to.equal(7);
-  })
+  });
 
 
 

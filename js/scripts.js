@@ -50,6 +50,9 @@ $(document).ready(function() {
   $("form#pizzaOrder").submit(function(event) {
     event.preventDefault();
 
+    var firstname = $("input#firstname").val();
+    var lastname = $("input#lastname").val();
+
     var size = $("#pizzaSize input[type='radio']:checked").val();
     var sauce = $("#pizzaSauce input[type='radio']:checked").val();
     var meat = [];
@@ -61,9 +64,12 @@ $(document).ready(function() {
       toppings[i] = $(this).val();});
 
     var newPizza = new PizzaOrder(size, sauce, meat, cheese, toppings);
+    var fullName = firstname + " " + lastname;
 
     $("#receipt").show();
     $(".confirmation").show();
+    $("#customerName").text(firstname);
+    $(".fullName").text(fullName);
     $(".orderSize").text(size);
     $(".orderSauce").text(sauce);
     $(".orderMeat").text(meat);

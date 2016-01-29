@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <header>
-        <h1></h1>
+        <h1>Pi Pizzeria</h1>
       </header>
 
       <div class="row">
@@ -20,53 +20,20 @@
           <p>To create your pizza, simply select the size a size of pizza, as well as the sauce, meats, cheeses, and toppings you would like. Once you are satisfied with your pizza, click the 'Order Pizza' button below.</p>
         </div>
       </div>
-<!--Prices / Aside-->
-      <div class="row">
-        <div class="col-sm-4">
-          <h4>Prices:</h4>
-            <p>Sizes</p>
-            <ul>
-              <li>Small: $5.00</li>
-              <li>Medium: $6.00</li>
-              <li>Large: $7.00</li>
-            </ul>
-            <p>Sauces:</p>
-            <ul>
-              <li>Red: No added charge</li>
-              <li>Others: $0.35</li>
-            </ul>
-            <p>Meats:</p>
-            <ul>
-              <li>Pepperoni: No added charge</li>
-              <li>Others: $0.75</li>
-            </ul>
-            <p>Cheese:</p>
-            <ul>
-              <li>Mozzarella: No added charge</li>
-              <li>Others: $0.15</li>
-            </ul>
-            <p>Toppings:</p>
-            <ul>
-              <li>$0.35
-                <ul>
-                  <li>Olives</li>
-                  <li>Bell Peppers</li>
-                  <li>Green Onion</li>
-                </ul>
-              </li>
-              <li>$0.50
-                <ul>
-                  <li>Mushrooms</li>
-                  <li>Pineapple</li>
-                  <li>Jalapeno</li>
-                </ul>
-              </li>
-            </ul>
-        </div>
+
 <!--Pizza form-->
-          <div class="col-sm-4">
-            <h3>Make your Pizza!</h3>
-            <form id="pizzaOrder" >
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="mainForm">
+            <form class="form-inline" id="pizzaOrder">
+              <div id="name">
+                <label class="formSection">Your Name:</label>
+                  <label for="firstname">First:</label>
+                  <input id="firstname"type="text" name="firstname" vaxlue="">
+                  <label for="lastname">Last:</label>
+                  <input id="lastname" type="text" name="lastname" value="">
+              </div>
+              <h2>Pizza Options:</h2>
               <div id="pizzaSize">
                 <label class="formSection" for="sizes">Size:</label>
                   <div class="radio">
@@ -149,25 +116,72 @@
                      <label><input type="checkbox" value="jalapeno">Jalapeno</label>
                    </div>
               </div>
-              <button type="submit" name="button">Order Pizza</button>
+
+              <button class="btn btn-primary" type="submit" name="button">Order Pizza</button>
             </form>
 
             <div class="confirmation">
-              <h3>Thank you!</h3>
+              <h3>Thank you, <span id="customerName"></span>!</h3>
               <h4>Your pizza order has been placed.</h4>
+            </div>
+<!--Receipt-->
+            <div id="receipt">
+              <h3>Receipt:</h3>
+              <p>Name: <span class="fullName"></span></p>
+              <p>Size: <span class="orderSize"></span></p>
+              <p>Sauce: <span class="orderSauce"></span></p>
+              <p>Meats: <span class="orderMeat"></span></p>
+              <p>Cheese: <span class="orderCheese"></span></p>
+              <p>Toppings: <span class="orderToppings"></span></p>
+              <h4>Price: $<span class="pizzaCost"></span></h4>
             </div>
 
           </div>
-<!--Receipt-->
-          <div id="receipt" class="col-sm-4">
-            <h3>Pizza Order Receipt:</h3>
-            <p>Size: <span class="orderSize"></span></p>
-            <p>Sauce: <span class="orderSauce"></span></p>
-            <p>Meats: <span class="orderMeat"></span></p>
-            <p>Cheese: <span class="orderCheese"></span></p>
-            <p>Toppings: <span class="orderToppings"></span></p>
-            <h4>Price: $<span class="pizzaCost"></span></h4>
+        </div>
 
+<!--Prices / Aside-->
+          <div class="col-sm-3">
+            <div class="aside">
+              <h4>Prices:</h4>
+                <p>Sizes</p>
+                <ul>
+                  <li>Small: $5.00</li>
+                  <li>Medium: $6.00</li>
+                  <li>Large: $7.00</li>
+                </ul>
+                <p>Sauces:</p>
+                <ul>
+                  <li>Red: No added charge</li>
+                  <li>Others: $0.35</li>
+                </ul>
+                <p>Meats:</p>
+                <ul>
+                  <li>Pepperoni: No added charge</li>
+                  <li>Others: $0.75</li>
+                </ul>
+                <p>Cheese:</p>
+                <ul>
+                  <li>Mozzarella: No added charge</li>
+                  <li>Others: $0.15</li>
+                </ul>
+                <p>Toppings:</p>
+                <ul>
+                  <li>$0.35
+                    <ul>
+                      <li>Olives</li>
+                      <li>Bell Peppers</li>
+                      <li>Green Onion</li>
+                    </ul>
+                  </li>
+                  <li>$0.50
+                    <ul>
+                      <li>Mushrooms</li>
+                      <li>Pineapple</li>
+                      <li>Jalapeno</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
           </div>
         </div>
 

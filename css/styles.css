@@ -1,3 +1,36 @@
+/* General Styles*/
+body {
+  font-size: 1.7em;
+}
+
 #receipt, .confirmation {
   display: none;
+}
+
+/* Form layout styles */
+.mainForm {
+  padding: 0px 20px;
+}
+
+.mainForm h2 {
+  font-size: 1.8em;
+}
+
+.mainForm .formSection {
+  font-size: 1.25em;
+}
+
+.mainForm label {
+  padding: 5px;
+  padding-right: 10px;
+}
+
+#pizzaSize, #pizzaSauce, #pizzaMeat, #pizzaCheese, #pizzaToppings {
+  margin-top: 15px;
+}
+
+/*Price listing aside*/
+.aside {
+  padding: 20px;
+  font-size: 0.9em;
 }
