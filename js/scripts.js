@@ -43,7 +43,7 @@ PizzaOrder.prototype.price = function(){
       pizzaPrice += 0.35;
     }
   }
-return pizzaPrice;
+return pizzaPrice.toFixed(2);
 };
 
 $(document).ready(function() {

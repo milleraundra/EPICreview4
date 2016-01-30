@@ -1,11 +1,30 @@
 /* General Styles*/
 body {
   font-size: 1.7em;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
 }
 
 #receipt, .confirmation {
   display: none;
 }
+
+.container {
+  background-color: #FFE4BB;
+
+}
+
+/* Header styles */
+header h1 {
+  font-size: 3em;
+}
+
+
+/*nav {
+  display:block;
+  float: right;
+  /*clear: left;*/
+
 
 /* Form layout styles */
 .mainForm {
