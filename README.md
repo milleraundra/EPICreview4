@@ -11,7 +11,8 @@ This application is designed to allow consumers to order a custom pizza. The app
 ## Setup/Installation Requirements
 
 **To View**
-Use this link to view the live application:
+Use this link to view the live application: http://milleraundra.github.io/EPICreview4/
+
 **To Edit**
 1. Fork this GitHub repository: https://github.com/milleraundra/EPICreview4
 2. Clone the repository to your local drive.
